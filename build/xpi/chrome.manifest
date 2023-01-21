@@ -3,4 +3,4 @@ skin zscript_language classic/1.0 skin/
 locale zscript_language en-US locale/en-US/
 
 manifest components/component.manifest
-category udl-lexers zscript_language@http://luborcerny.com 1
+category udl-lexers zscript_language@gmail.com 1

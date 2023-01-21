@@ -307,28 +307,15 @@ state IN_SSL_DEFAULT:
 
 /\w+(?:\:[\w\s]+)+/ : paint(upto, SSL_DEFAULT), paint(include, M_ENTITY) 		# text like 'Tool: Masking:Mask By Alpha'  ASSIGNED: Komodo>Tools>Color Scheme Editor>Entity Reference
 
+
+
 # ----------- Entering Comments ---------- #
 
 # C-style one line comments
 '//' : paint(upto, SSL_DEFAULT),  => IN_SSL_COMMENT_TO_EOL
 
-# Hash-style one line comments
-#'#' : paint(upto, SSL_DEFAULT),  => IN_SSL_COMMENT_TO_EOL
-
-# SQL-style one line comments
-#'--' : paint(upto, SSL_DEFAULT),  => IN_SSL_COMMENT_TO_EOL
-
-# Lisp-style one line comments
-';' : paint(upto, SSL_DEFAULT),  => IN_SSL_COMMENT_TO_EOL
-
-# Erlang-style one line comments
-#'%' : paint(upto, SSL_DEFAULT),  => IN_SSL_COMMENT_TO_EOL
-
 # C-style block comments
 '/*' : paint(upto, SSL_DEFAULT), => IN_SSL_COMMENT_C_BLOCK
-
-# Pascal-style block comments
-#'(*' : paint(upto, SSL_DEFAULT), => IN_SSL_COMMENT_PASCAL_BLOCK
 
 
 
@@ -338,11 +325,13 @@ state IN_SSL_DEFAULT:
 /[$WS]+/  : #stay
 
 
+
 # ----------- Entering Strings ---------- #
 
 '"' : paint(upto, SSL_DEFAULT), => IN_SSL_DSTRING
 '\'' : paint(upto, SSL_DEFAULT), => IN_SSL_SSTRING
 '`' : paint(upto, SSL_DEFAULT), => IN_SSL_XSTRING
+
 
 
 # ----------- Entering Numbers ---------- #
@@ -353,9 +342,11 @@ state IN_SSL_DEFAULT:
 /[-+]?[1-9]+/ : paint(upto, SSL_DEFAULT), paint(include, SSL_NUMBER)        # Regular numbers
 
 
+
 # ----------- Entering Identifiers ---------- #
 
 /[$FIRSTNAMECHAR][$NAMECHAR]*/ : paint(upto, SSL_DEFAULT), paint(include, SSL_IDENTIFIER)
+
 
 
 # ----------- Entering Operators ---------- #
@@ -365,13 +356,13 @@ state IN_SSL_DEFAULT:
 
 ################ In Comments - determines how we exit a comment ################
 
-state IN_SSL_COMMENT_TO_EOL: 
+state IN_SSL_COMMENT_TO_EOL:
 /[\r\n]/ : paint(upto, SSL_COMMENT), => IN_SSL_DEFAULT  # back to default state
 
-state IN_SSL_COMMENT_C_BLOCK: 
+state IN_SSL_COMMENT_C_BLOCK:
 '*/' : paint(include, SSL_COMMENTBLOCK), => IN_SSL_DEFAULT  # back to default state
 
-state IN_SSL_COMMENT_PASCAL_BLOCK: 
+state IN_SSL_COMMENT_PASCAL_BLOCK:
 '*)' : paint(include, SSL_COMMENTBLOCK), => IN_SSL_DEFAULT  # back to default state
 
 ################ In Strings - determines how we exit a string ################

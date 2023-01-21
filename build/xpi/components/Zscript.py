@@ -20,16 +20,16 @@ class KoZscriptLanguage(KoUDLLanguage):
     _reg_contractid_ = "@activestate.com/koLanguage?language=%s;1" % name
     _reg_categories_ = [("komodo-language", name)]
     _reg_clsid_ = "08598ea1-faa9-4973-8552-be6d6e1dc134"
-    defaultExtension = '.zxt'
+    defaultExtension = '.txt'
 
     # ------------ Commenting Controls ------------ #
 
     commentDelimiterInfo = {
         "line": [
-                #'//',   # C-style one line comments
+                '//',   # C-style one line comments
                 #'#',    # Hash-style one line comments
                 #'--',   # SQL-style one line comments
-                ';',    # Lisp-style one line comments
+                #';',    # Lisp-style one line comments
                 #'%',    # Erlang-style one line comments
                 ],
         "block": [

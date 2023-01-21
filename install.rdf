@@ -2,12 +2,12 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
     <Description about="urn:mozilla:install-manifest">
-        <em:id>zscript_language@http://luborcerny.com</em:id>
+        <em:id>zscript_language@gmail.com</em:id>
         <em:name>zscript_language</em:name>
         <em:version>0.1</em:version>
-        <em:description></em:description>
-        <em:creator>Lubgor Vilbur Cerny</em:creator>
-        <em:homepageURL></em:homepageURL>
+        <em:description>Language for Zbrush script</em:description>
+        <em:creator>Lubor Černý</em:creator>
+        <em:homepageURL>http://luborcerny.com</em:homepageURL>
         <em:type>2</em:type> <!-- type=extension --> 
 
         <em:targetApplication>
