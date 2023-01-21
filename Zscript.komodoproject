@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="67dc1d47-64f3-4114-bda5-dec8e1241a82" kpf_version="5" name="Zscript.komodoproject">
+<livefolder id="117c7daa-e34e-4c1d-ba5e-b02e9fa5bf0a" idref="67dc1d47-64f3-4114-bda5-dec8e1241a82" name="Keywords" url="Keywords/">
+</livefolder>
+<file id="bb56ac24-4a78-476e-b70b-36c1ca324320" idref="67dc1d47-64f3-4114-bda5-dec8e1241a82" name="zscript-mainlex.udl" url="udl/zscript-mainlex.udl">
+</file>
+<preference-set idref="67dc1d47-64f3-4114-bda5-dec8e1241a82" id="project" preftype="project">
+  <boolean id="configured">1</boolean>
+  <string id="koextgen.target">komodolang</string>
+  <long id="prefs_version">1</long>
+</preference-set>
+</project>

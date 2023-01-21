@@ -1,0 +1,6 @@
+VarDef
+VarSet
+anywhere
+VarListCopy
+VarLoad
+VarSave

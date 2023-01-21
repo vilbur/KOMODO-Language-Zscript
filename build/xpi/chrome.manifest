@@ -1,0 +1,6 @@
+content zscriptlanguage content/
+skin zscriptlanguage classic/1.0 skin/
+locale zscriptlanguage en-US locale/en-US/
+
+manifest components/component.manifest
+category udl-lexers zscript_language@yourdomain.org 1

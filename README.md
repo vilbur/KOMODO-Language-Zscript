@@ -1,1 +1,1 @@
-# KOMODO-Language-Zscript
+# Language for Zbrush script
