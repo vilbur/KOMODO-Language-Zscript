@@ -1,6 +1,6 @@
-content zscriptlanguage content/
-skin zscriptlanguage classic/1.0 skin/
-locale zscriptlanguage en-US locale/en-US/
+content zscript_language content/
+skin zscript_language classic/1.0 skin/
+locale zscript_language en-US locale/en-US/
 
 manifest components/component.manifest
-category udl-lexers zscript_language@yourdomain.org 1
+category udl-lexers zscript_language@http://luborcerny.com 1

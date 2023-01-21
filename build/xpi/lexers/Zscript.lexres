@@ -26,7 +26,7 @@
 19:1
 18:3
 19:0
-11:2819
+11:2812
 12:Assert BackColorSet ButtonFind ButtonPress ButtonSet ButtonUnPress CanvasCl
 12:ick CanvasGyroHide CanvasGyroShow CanvasPanGetH CanvasPanGetV CanvasPanSet 
 12:CanvasStroke CanvasStrokes CanvasZoomGet CanvasZoomSet Caption CurveAddPoin
@@ -62,9 +62,9 @@
 12:Time TextCalcWidth Title ToolGetActiveIndex ToolGetCount ToolGetPath ToolGe
 12:tSubToolID ToolGetSubToolsCount ToolLocateSubTool ToolSelect ToolSetPath Tr
 12:ansformGet TransformSet TransposeGet TransposeIsShown TransposeSet Val Var 
-12:VarAdd VarDec VarDef VarDiv VarInc VarListCopy VarLoad VarMul VarSave VarSe
-12:t VarSize VarSub ZBrushInfo ZBrushPriorityGet ZBrushPrioritySet ZSphereAdd 
-12:ZSphereDel ZSphereEdit ZSphereGet ZSphereSet
+12:VarAdd VarDec VarDef VarDiv VarInc VarListCopy VarLoad VarMul VarSave VarSi
+12:ze VarSub ZBrushInfo ZBrushPriorityGet ZBrushPrioritySet ZSphereAdd ZSphere
+12:Del ZSphereEdit ZSphereGet ZSphereSet
 21
 22:45:44
 11:2
@@ -90,6 +90,14 @@
 40
 37:3
 35:2
+11:28
+12:(?<!\w)(VarSet)(?=\W*(?!\w))
+36:2:31:48:0:-1:0:0:0
+40
+11:17
+12:\w+(?:\:[\w\s]+)+
+36:2:31:11:0:-1:0:0:0
+40
 11:2
 12://
 36:1:31:-1:0:3:0:0:0

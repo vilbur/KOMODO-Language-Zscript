@@ -20,7 +20,7 @@ class KoZscriptLanguage(KoUDLLanguage):
     _reg_contractid_ = "@activestate.com/koLanguage?language=%s;1" % name
     _reg_categories_ = [("komodo-language", name)]
     _reg_clsid_ = "08598ea1-faa9-4973-8552-be6d6e1dc134"
-    defaultExtension = '.zxt|.txt'
+    defaultExtension = '.zxt'
 
     # ------------ Commenting Controls ------------ #
 

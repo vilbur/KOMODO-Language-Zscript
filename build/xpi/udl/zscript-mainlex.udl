@@ -231,7 +231,6 @@ keywords [
 	"GetPolyMesh3DVolume",
 	"IWidth",
 	"SoundPlay",
-	"VarSet",
 	"HotKeyText",
 	"Loop",
 	"SoundStop",
@@ -277,16 +276,36 @@ keywords [
 # Set the basic patterns we'll be using for styling transitions.
 # For most programming languages, names cannot start with a number, but they
 # often allow a number after the first character - e.g. "bar21a"
+
+# pattern TEMPALTE_PATTERN = '(?<!\w)(WORD_PLACEHOLDER)(?=\W*(?!\w))'
+
 pattern FIRSTNAMECHAR = '_a-zA-Z\x80-\xff' # names (identifier, keyword, variable...) only can start with these chars
 pattern NAMECHAR = '$FIRSTNAMECHAR\d'      # rest of the name, after the first char
 pattern WS = '\s\t\r\n'                    # whitespace
 pattern OP = '!#%&\(\)\*\+,-\.\/:;<=>\?@\[\]\^\{\}~|'  # operator characters - escaping special regex values
+
+
+################ DEFINE word type ################
+
+pattern VARIABLE = '(?<!\w)(VarSet)(?=\W*(?!\w))'
+
+
+
 
 ################ Default Style ################
 
 # Define what happens when in default (initial) state. This is where we set up
 # the transitions to other states.
 state IN_SSL_DEFAULT:
+
+
+
+
+################ CUSTOM Style ################
+
+/$VARIABLE/	: paint(upto, SSL_DEFAULT), paint(include, SSL_VARIABLE)
+
+/\w+(?:\:[\w\s]+)+/ : paint(upto, SSL_DEFAULT), paint(include, M_ENTITY) 		# text like 'Tool: Masking:Mask By Alpha'  ASSIGNED: Komodo>Tools>Color Scheme Editor>Entity Reference
 
 # ----------- Entering Comments ---------- #
 
@@ -311,16 +330,20 @@ state IN_SSL_DEFAULT:
 # Pascal-style block comments
 #'(*' : paint(upto, SSL_DEFAULT), => IN_SSL_COMMENT_PASCAL_BLOCK
 
+
+
 # ----------- Entering Whitespace ---------- #
 
 # Just stay in whatever style we currently are using.
 /[$WS]+/  : #stay
+
 
 # ----------- Entering Strings ---------- #
 
 '"' : paint(upto, SSL_DEFAULT), => IN_SSL_DSTRING
 '\'' : paint(upto, SSL_DEFAULT), => IN_SSL_SSTRING
 '`' : paint(upto, SSL_DEFAULT), => IN_SSL_XSTRING
+
 
 # ----------- Entering Numbers ---------- #
 
@@ -329,9 +352,11 @@ state IN_SSL_DEFAULT:
 /[-+]?0[0-7]*/ : paint(upto, SSL_DEFAULT), paint(include, SSL_NUMBER)       # Octal numbers
 /[-+]?[1-9]+/ : paint(upto, SSL_DEFAULT), paint(include, SSL_NUMBER)        # Regular numbers
 
+
 # ----------- Entering Identifiers ---------- #
 
 /[$FIRSTNAMECHAR][$NAMECHAR]*/ : paint(upto, SSL_DEFAULT), paint(include, SSL_IDENTIFIER)
+
 
 # ----------- Entering Operators ---------- #
 
