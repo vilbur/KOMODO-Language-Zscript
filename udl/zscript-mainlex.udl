@@ -203,7 +203,6 @@ keywords [
 	"FontSetSize",
 	"IsUnlocked",
 	"RoutineCall",
-	"VarDef",
 	"FontSetSizeLarge",
 	"ISwitch",
 	"RoutineDef",
@@ -215,11 +214,9 @@ keywords [
 	"FontSetSizeSmall",
 	"IUnlock",
 	"SectionEnd",
-	"VarListCopy",
 	"FrontColorSet",
 	"IUnPress",
 	"ShellExecute",
-	"VarLoad",
 	"GetActiveToolPath",
 	"IUpdate",
 	"Sleep",
@@ -227,7 +224,6 @@ keywords [
 	"GetPolyMesh3DArea",
 	"IVPos",
 	"SleepAgain",
-	"VarSave",
 	"GetPolyMesh3DVolume",
 	"IWidth",
 	"SoundPlay",
@@ -287,7 +283,7 @@ pattern OP = '!#%&\(\)\*\+,-\.\/:;<=>\?@\[\]\^\{\}~|'  # operator characters - e
 
 ################ DEFINE word type ################
 
-pattern VARIABLE = '(?<!\w)(VarSet)(?=\W*(?!\w))'
+pattern VARIABLE = '(?<!\w)(VarDef|VarSet|VarListCopy|VarLoad|VarSave)(?=\W*(?!\w))'
 
 
 

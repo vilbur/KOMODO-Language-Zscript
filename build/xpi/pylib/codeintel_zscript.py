@@ -40,7 +40,6 @@ log = logging.getLogger("codeintel.zscript")
 # These keywords are copied from "Zscript-mainlex.udl" - be sure to keep both
 # of them in sync.
 keywords = [
-    # Keywords
 	"Assert",
 	"If",
 	"MemRead",
