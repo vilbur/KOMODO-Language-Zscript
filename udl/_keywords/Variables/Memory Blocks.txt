@@ -12,13 +12,9 @@ MemSaveToFile
 MemWrite
 MemWriteString
 MTransformGet
-Level
 MTransformSet
-Level
 MVarDef
 MVarGet
 MVarSet
 SoundPlay
-Level
 SoundStop
-Level

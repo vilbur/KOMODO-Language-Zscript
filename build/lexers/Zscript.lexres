@@ -26,7 +26,7 @@
 19:1
 18:3
 19:0
-11:2777
+11:2628
 12:Assert BackColorSet ButtonFind ButtonPress ButtonSet ButtonUnPress CanvasCl
 12:ick CanvasGyroHide CanvasGyroShow CanvasPanGetH CanvasPanGetV CanvasPanSet 
 12:CanvasStroke CanvasStrokes CanvasZoomGet CanvasZoomSet Caption CurveAddPoin
@@ -44,27 +44,25 @@
 12:SetStatus IShow IShowActions ISlider IStroke ISubPalette ISwitch IToggle IU
 12:nPress IUnlock IUpdate IVPos IWidth If Image Interpolate IsDisabled IsEnabl
 12:ed IsLocked IsPolyMesh3DSolid IsUnlocked Loop LoopContinue LoopExit MTransf
-12:ormGet MTransformSet MVarDef MVarGet MVarSet MemCopy MemCreate MemCreateFro
-12:mFile MemDelete MemGetSize MemMove MemMultiWrite MemRead MemReadString MemR
-12:esize MemSaveToFile MemWrite MemWriteString MergeUndo Mesh3DGet MessageOK M
-12:essageOKCancel MessageYesNo MessageYesNoCancel MouseHPos MouseLButton Mouse
-12:VPos NormalMapCreate Note NoteBar NoteIButton NoteISwitch PD PageSetWidth P
-12:aintBackSliver PaintBackground PaintPageBreak PaintRect PaintTextRect PenMo
-12:ve PenMoveCenter PenMoveDown PenMoveLeft PenMoveRight PenSetColor PixolPick
-12: PropertySet RGB Randomize RoutineCall RoutineDef SectionBegin SectionEnd S
-12:hellExecute Sleep SleepAgain SoundPlay SoundStop StrAsk StrExtract StrFind 
-12:StrFromAsc StrLength StrLower StrMerge StrToAsc StrUpper StrokeGetInfo Stro
-12:keGetLast StrokeLoad StrokesLoad SubTitle SubToolGetActiveIndex SubToolGetC
-12:ount SubToolGetFolderIndex SubToolGetFolderName SubToolGetID SubToolGetStat
-12:us SubToolLocate SubToolSelect SubToolSetStatus SystemInfo TLDeleteKeyFrame
-12: TLGetActiveTrackIndex TLGetKeyFrameTime TLGetKeyFramesCount TLGetTime TLGo
-12:toKeyFrameTime TLGotoTime TLNewKeyFrame TLSetActiveTrackIndex TLSetKeyFrame
-12:Time TextCalcWidth Title ToolGetActiveIndex ToolGetCount ToolGetPath ToolGe
-12:tSubToolID ToolGetSubToolsCount ToolLocateSubTool ToolSelect ToolSetPath Tr
-12:ansformGet TransformSet TransposeGet TransposeIsShown TransposeSet Val Var 
-12:VarAdd VarDec VarDiv VarInc VarMul VarSize VarSub ZBrushInfo ZBrushPriority
-12:Get ZBrushPrioritySet ZSphereAdd ZSphereDel ZSphereEdit ZSphereGet ZSphereS
-12:et
+12:ormGet MTransformSet MVarDef MVarGet MVarSet MergeUndo Mesh3DGet MessageOK 
+12:MessageOKCancel MessageYesNo MessageYesNoCancel MouseHPos MouseLButton Mous
+12:eVPos NormalMapCreate Note NoteBar NoteIButton NoteISwitch PD PageSetWidth 
+12:PaintBackSliver PaintBackground PaintPageBreak PaintRect PaintTextRect PenM
+12:ove PenMoveCenter PenMoveDown PenMoveLeft PenMoveRight PenSetColor PixolPic
+12:k PropertySet RGB Randomize RoutineCall RoutineDef SectionBegin SectionEnd 
+12:ShellExecute Sleep SleepAgain SoundPlay SoundStop StrAsk StrExtract StrFind
+12: StrFromAsc StrLength StrLower StrMerge StrToAsc StrUpper StrokeGetInfo Str
+12:okeGetLast StrokeLoad StrokesLoad SubTitle SubToolGetActiveIndex SubToolGet
+12:Count SubToolGetFolderIndex SubToolGetFolderName SubToolGetID SubToolGetSta
+12:tus SubToolLocate SubToolSelect SubToolSetStatus SystemInfo TLDeleteKeyFram
+12:e TLGetActiveTrackIndex TLGetKeyFrameTime TLGetKeyFramesCount TLGetTime TLG
+12:otoKeyFrameTime TLGotoTime TLNewKeyFrame TLSetActiveTrackIndex TLSetKeyFram
+12:eTime TextCalcWidth Title ToolGetActiveIndex ToolGetCount ToolGetPath ToolG
+12:etSubToolID ToolGetSubToolsCount ToolLocateSubTool ToolSelect ToolSetPath T
+12:ransformGet TransformSet TransposeGet TransposeIsShown TransposeSet Val Var
+12: VarAdd VarDec VarDiv VarInc VarMul VarSize VarSub ZBrushInfo ZBrushPriorit
+12:yGet ZBrushPrioritySet ZSphereAdd ZSphereDel ZSphereEdit ZSphereGet ZSphere
+12:Set
 21
 22:45:44
 11:2
@@ -90,8 +88,11 @@
 40
 37:3
 35:2
-11:63
-12:(?<!\w)(VarDef|VarSet|VarListCopy|VarLoad|VarSave)(?=\W*(?!\w))
+11:284
+12:(?<!\w)(VarDef|VarSet|VarListCopy|VarLoad|VarSave|MemCopy|MemCreate|MemCrea
+12:teFromFile|MemDelete|MemGetSize|MemMove|MemMultiWrite|MemRead|MemReadString
+12:|MemResize|MemSaveToFile|MemWrite|MemWriteString|MTransformGet|MTransformSe
+12:t|MVarDef|MVarGet|MVarSet|SoundPlay|SoundStop)(?=\W*(?!\w))
 36:2:31:48:0:-1:0:0:0
 40
 11:17

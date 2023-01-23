@@ -30,27 +30,21 @@ keywords [
 	# Keywords
 	"Assert",
 	"If",
-	"MemRead",
 	"StrokeLoad",
 	"BackColorSet",
 	"IFadeIn",
-	"MemReadString",
 	"StrokesLoad",
 	"ButtonFind",
 	"IFadeOut",
-	"MemResize",
 	"StrToAsc",
 	"ButtonPress",
 	"IFreeze",
-	"MemSaveToFile",
 	"StrUpper",
 	"ButtonSet",
 	"IGet",
-	"MemWrite",
 	"SubTitle",
 	"ButtonUnPress",
 	"IGetFlags",
-	"MemWriteString",
 	"SubToolGetActiveIndex",
 	"CanvasClick",
 	"IGetHotkey",
@@ -240,31 +234,24 @@ keywords [
 	"StrExtract",
 	"Var",
 	"IClose",
-	"MemCopy",
 	"StrFind",
 	"ZBrushInfo",
 	"IColorSet",
-	"MemCreate",
 	"StrFromAsc",
 	"ZBrushPriorityGet",
 	"IConfig",
-	"MemCreateFromFile",
 	"StrLength",
 	"ZBrushPrioritySet",
 	"IDialog",
-	"MemDelete",
 	"StrLower",
 	"ZSphereAdd",
 	"IDisable",
-	"MemGetSize",
 	"StrMerge",
 	"ZSphereDel",
 	"IEnable",
-	"MemMove",
 	"StrokeGetInfo",
 	"ZSphereEdit",
 	"IExists",
-	"MemMultiWrite",
 	"StrokeGetLast",
 	"ZSphereSet"
 ]
@@ -283,7 +270,7 @@ pattern OP = '!#%&\(\)\*\+,-\.\/:;<=>\?@\[\]\^\{\}~|'  # operator characters - e
 
 ################ DEFINE word type ################
 
-pattern VARIABLE = '(?<!\w)(VarDef|VarSet|VarListCopy|VarLoad|VarSave)(?=\W*(?!\w))'
+pattern VARIABLE = '(?<!\w)(VarDef|VarSet|VarListCopy|VarLoad|VarSave|MemCopy|MemCreate|MemCreateFromFile|MemDelete|MemGetSize|MemMove|MemMultiWrite|MemRead|MemReadString|MemResize|MemSaveToFile|MemWrite|MemWriteString|MTransformGet|MTransformSet|MVarDef|MVarGet|MVarSet|SoundPlay|SoundStop)(?=\W*(?!\w))'
 
 
 
