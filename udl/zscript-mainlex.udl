@@ -290,6 +290,7 @@ state IN_SSL_DEFAULT:
 
 /\w+(?:\:[\w\s]+)+/ : paint(upto, SSL_DEFAULT), paint(include, M_ENTITY) 		# text like 'Tool: Masking:Mask By Alpha'  ASSIGNED: Komodo>Tools>Color Scheme Editor>Entity Reference
 
+/[\$]\w+/	: paint(upto, SSL_DEFAULT), paint(include, SSL_VARIABLE) # variable starts with$
 
 
 # ----------- Entering Comments ---------- #
